@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre Lineas: contexto, criterio y miradas sobre noticias de politica, deportes, economia, cultura y educacion.">
+  <title>Pol&iacute;tica | Entre L&iacute;neas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body data-page="politica">
+  <main>
+    <div class="hero-center" aria-label="Entre Lineas">
+      <div class="hero-square">
+        <div class="hero-content">
+          <h1 class="hero-title">ENTRE<br>L&Iacute;NEAS</h1>
+          <p class="hero-subtitle">M&aacute;s contexto, m&aacute;s criterio</p>
+        </div>
+      </div>
+    </div>
+    <nav class="color-controls" aria-label="Categorias">
+      <button class="nav-menu-toggle" id="navMenuToggle" type="button" aria-expanded="false" aria-label="Abrir menu">Menu</button>
+      <a class="color-btn home-btn" href="./index.html" data-route="inicio">Inicio</a>
+      <a class="color-btn" href="./politica.html" data-route="politica">Redes</a>
+      <a class="color-btn" href="./deportes.html" data-route="deportes">Pol&iacute;tica</a>
+      <a class="color-btn" href="./economia.html" data-route="economia">Econom&iacute;a</a>
+      <a class="color-btn" href="./cultura.html" data-route="cultura">Cultura</a>
+      <a class="color-btn" href="./educacion.html" data-route="educacion">Educaci&oacute;n</a>
+      <form class="search-form" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Buscar temas" autocomplete="off" aria-label="Buscar temas">
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="personalizar-wrapper" id="personalizarWrapper">
+        <button class="toggle-adjuster-btn" id="toggleAdjusterBtn" type="button" aria-label="Filtrar nivel de cercania" title="Filtrar nivel de cercania"><span class="filter-icon" aria-hidden="true"></span><span>Filtros</span></button>
+
+        <aside class="color-adjuster-panel" id="colorAdjusterPanel" aria-label="Nivel de cercania">
+          <div class="color-adjuster-header">
+            <h2 class="color-adjuster-title">Nivel de cercan&iacute;a</h2>
+            <button class="color-adjuster-close" id="closeAdjusterBtn" type="button" aria-label="Cerrar panel">&times;</button>
+          </div>
+
+          <div class="location-list">
+            <div class="location-item">
+              <button class="location-option" type="button" data-level="cercademi">Cerca de m&iacute;</button>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="ciudad">
+                Ciudad <span class="location-arrow" id="arrow-ciudad" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-ciudad">
+                <button class="submenu-item" type="button" data-value="bogota">Bogot&aacute;</button>
+                <button class="submenu-item" type="button" data-value="medellin">Medell&iacute;n</button>
+                <button class="submenu-item" type="button" data-value="cali">Cali</button>
+                <button class="submenu-item" type="button" data-value="barranquilla">Barranquilla</button>
+                <button class="submenu-item" type="button" data-value="cartagena">Cartagena</button>
+                <button class="submenu-item" type="button" data-value="bucaramanga">Bucaramanga</button>
+                <button class="submenu-item" type="button" data-value="pereira">Pereira</button>
+                <button class="submenu-item" type="button" data-value="manizales">Manizales</button>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="region">
+                Regionales <span class="location-arrow" id="arrow-region" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-region">
+                <button class="submenu-item" type="button" data-value="andina">Regi&oacute;n Andina</button>
+                <button class="submenu-item" type="button" data-value="caribe">Regi&oacute;n Caribe</button>
+                <button class="submenu-item" type="button" data-value="pacifica">Regi&oacute;n Pac&iacute;fica</button>
+                <button class="submenu-item" type="button" data-value="orinoquia">Orinoqu&iacute;a</button>
+                <button class="submenu-item" type="button" data-value="amazonia">Amazonia</button>
+                <button class="submenu-item" type="button" data-value="insular">Regi&oacute;n Insular</button>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="continente">
+                Continente <span class="location-arrow" id="arrow-continente" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-continente">
+                <button class="submenu-item" type="button" data-value="america-sur">Am&eacute;rica del Sur</button>
+                <button class="submenu-item" type="button" data-value="america-norte">Am&eacute;rica del Norte</button>
+                <button class="submenu-item" type="button" data-value="america-central">Am&eacute;rica Central</button>
+                <button class="submenu-item" type="button" data-value="europa">Europa</button>
+                <button class="submenu-item" type="button" data-value="asia">Asia</button>
+                <button class="submenu-item" type="button" data-value="africa">&Aacute;frica</button>
+                <button class="submenu-item" type="button" data-value="oceania">Ocean&iacute;a</button>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="pais">
+                Pa&iacute;s <span class="location-arrow" id="arrow-pais" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-pais">
+                <button class="submenu-item" type="button" data-value="colombia">Colombia</button>
+                <button class="submenu-item" type="button" data-value="venezuela">Venezuela</button>
+                <button class="submenu-item" type="button" data-value="brasil">Brasil</button>
+                <button class="submenu-item" type="button" data-value="ecuador">Ecuador</button>
+                <button class="submenu-item" type="button" data-value="peru">Per&uacute;</button>
+                <button class="submenu-item" type="button" data-value="argentina">Argentina</button>
+                <button class="submenu-item" type="button" data-value="mexico">M&eacute;xico</button>
+                <button class="submenu-item" type="button" data-value="chile">Chile</button>
+                <button class="submenu-item" type="button" data-value="usa">Estados Unidos</button>
+                <button class="submenu-item" type="button" data-value="espana">Espa&ntilde;a</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </nav>
+  
+    <section class="noticia-section" id="noticiaSection">
+      <div class="noticia-header">
+        <span class="etiqueta" id="noticiaEtiqueta">Bogot&aacute; &middot; Debate p&uacute;blico</span>
+        <h2 id="noticiaTitulo">Conozca su contexto</h2>
+        <p class="bajada" id="noticiaBajada">El ciudadano desconoce conceptos que lo rodean, hacen parte de su historia y contexto cultural, adem&aacute;s, de la relaci&oacute;n existente con la manipulaci&oacute;n de informaci&oacute;n e incluso desinformaci&oacute;n compartida por medios de baja confiabilidad.</p>
+        <div class="news-meta" aria-label="Datos editoriales">
+          <span>Redacci&oacute;n Entre L&iacute;neas</span>
+          <span>An&aacute;lisis</span>
+          <span>Lectura breve</span>
+        </div>
+      </div>
+
+      <div class="context-strip" aria-label="Resumen del tema">
+        <article>
+          <span>Alcance</span>
+          <strong id="claveAlcance">Bogot&aacute;</strong>
+        </article>
+        <article>
+          <span>Punto central</span>
+          <strong id="claveFoco">Privacidad</strong>
+        </article>
+      </div>
+
+      <div class="miradas-grid">
+        <article class="mirada-card izquierda">
+          <span class="mirada-label" id="label1">M-19</span>
+          <h3 id="titulo1">M-19</h3>
+          <p id="texto1">La nota de AFP Factual desmiente una imagen viral que aseguraba que el presidente Gustavo Petro hab&iacute;a ordenado ense&ntilde;ar en colegios y universidades que los integrantes del M-19 eran &ldquo;h&eacute;roes&rdquo; y que los j&oacute;venes deb&iacute;an seguir su ejemplo. La publicaci&oacute;n falsa utilizaba el logo del medio colombiano para aparentar ser real. AFP verific&oacute; que no existe evidencia de que Petro haya dado esa orden y confirm&oacute; con el propio medio que se trataba de un montaje editado. La imagen original de KienyKe hablaba realmente de un mensaje de Petro recordando a un excompa&ntilde;ero del M-19 fallecido, pero nunca mencion&oacute; imponer ense&ntilde;anzas sobre la exguerrilla en instituciones educativas. Adem&aacute;s, la pieza viral ten&iacute;a diferencias visuales en tipograf&iacute;a y dise&ntilde;o frente a la publicaci&oacute;n aut&eacute;ntica.</p>
+        </article>
+        <article class="mirada-card central">
+          <span class="mirada-label" id="label2">Entre L&iacute;neas</span>
+          <h3 id="titulo2">Privacidad</h3>
+          <p id="texto2">Edward Snowden advirti&oacute; que tanto los celulares Android como los iPhone recopilan constantemente informaci&oacute;n de los usuarios y no garantizan privacidad total. Explic&oacute; que los tel&eacute;fonos almacenan datos personales como ubicaci&oacute;n, conversaciones y h&aacute;bitos digitales, lo que puede facilitar vigilancia por parte de empresas, gobiernos o ciberdelincuentes. Tambi&eacute;n mencion&oacute; que sistemas como GrapheneOS ofrecen mayores medidas de seguridad y privacidad. Snowden asegur&oacute; que los tel&eacute;fonos inteligentes actuales funcionan como herramientas de recolecci&oacute;n masiva de datos, ya que registran gran parte de la actividad diaria de las personas. Aunque reconoci&oacute; que Apple y Android tienen sistemas de seguridad avanzados, afirm&oacute; que ninguno protege completamente la privacidad del usuario frente al rastreo digital.</p>
+        </article>
+        <article class="mirada-card derecha">
+          <span class="mirada-label" id="label3">Censura</span>
+          <h3 id="titulo3">Censura</h3>
+          <p id="texto3">La investigaci&oacute;n de RTVC Noticias revel&oacute; un video in&eacute;dito del caso de Dilan Cruz que habr&iacute;a permanecido oculto durante m&aacute;s de seis a&ntilde;os en archivos de Red+Noticias. Las im&aacute;genes muestran el momento exacto en el que el joven recibe el impacto del proyectil disparado por un agente del ESMAD durante las protestas de 2019. Seg&uacute;n testimonios de exempleados del canal, el material no fue emitido por presuntas &oacute;rdenes internas de ocultarlo y manejar una narrativa distinta sobre los hechos. La grabaci&oacute;n contradice versiones iniciales del caso y reabre el debate sobre el uso excesivo de la fuerza, la censura medi&aacute;tica y el posible ocultamiento de evidencia en uno de los casos m&aacute;s simb&oacute;licos de violencia policial en Colombia.</p>
+        </article>
+      </div>
+
+      <div class="section-subhead" id="videosHeading">
+        <span>Videos</span>
+        <strong>Material relacionado</strong>
+      </div>
+      <div class="videos-grid" id="videosGrid" aria-label="Videos relacionados">
+        <a class="video-card" href="https://youtube.com/shorts/VvPxydh5qyA" target="_blank" rel="noopener noreferrer" aria-label="Abrir Short pol&iacute;tico 1 en YouTube">
+          <img src="https://img.youtube.com/vi/VvPxydh5qyA/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play">&#9654;</span>
+          <span class="video-title">Short pol&iacute;tico 1</span>
+        </a>
+        <a class="video-card" href="https://youtube.com/shorts/OQ9HlOg4JCY" target="_blank" rel="noopener noreferrer" aria-label="Abrir Short pol&iacute;tico 2 en YouTube">
+          <img src="https://img.youtube.com/vi/OQ9HlOg4JCY/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play">&#9654;</span>
+          <span class="video-title">Short pol&iacute;tico 2</span>
+        </a>
+        <a class="video-card" href="https://youtube.com/shorts/uB_qiWPyIIU" target="_blank" rel="noopener noreferrer" aria-label="Abrir Short pol&iacute;tico 3 en YouTube">
+          <img src="https://img.youtube.com/vi/uB_qiWPyIIU/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play">&#9654;</span>
+          <span class="video-title">Short pol&iacute;tico 3</span>
+        </a>
+      </div>
+
+      <form class="comentarios-box" id="comentarioForm">
+        <div class="comentarios-head">
+          <label class="comentarios-label" for="comentarioTexto">Comentarios</label>
+        </div>
+        <div class="comentario-input-row">
+          <input id="comentarioNombre" class="comentario-nombre" type="text" placeholder="Tu nombre" autocomplete="name">
+          <textarea id="comentarioTexto" rows="4" placeholder="Escribe tu comentario"></textarea>
+          <button class="comentario-submit" type="submit">Publicar</button>
+        </div>
+        <div class="comentarios-list" id="comentariosList" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

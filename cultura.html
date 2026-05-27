@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre Lineas: contexto, criterio y miradas sobre noticias de politica, deportes, economia, cultura y educacion.">
+  <title>Cultura | Entre L&iacute;neas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body data-page="cultura">
+  <main>
+    <div class="hero-center" aria-label="Entre Lineas">
+      <div class="hero-square">
+        <div class="hero-content">
+          <h1 class="hero-title">ENTRE<br>L&Iacute;NEAS</h1>
+          <p class="hero-subtitle">M&aacute;s contexto, m&aacute;s criterio</p>
+        </div>
+      </div>
+    </div>
+    <nav class="color-controls" aria-label="Categorias">
+      <button class="nav-menu-toggle" id="navMenuToggle" type="button" aria-expanded="false" aria-label="Abrir menu">Menu</button>
+      <a class="color-btn home-btn" href="./index.html" data-route="inicio">Inicio</a>
+      <a class="color-btn" href="./politica.html" data-route="politica">Redes</a>
+      <a class="color-btn" href="./deportes.html" data-route="deportes">Pol&iacute;tica</a>
+      <a class="color-btn" href="./economia.html" data-route="economia">Econom&iacute;a</a>
+      <a class="color-btn" href="./cultura.html" data-route="cultura">Cultura</a>
+      <a class="color-btn" href="./educacion.html" data-route="educacion">Educaci&oacute;n</a>
+      <form class="search-form" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Buscar temas" autocomplete="off" aria-label="Buscar temas">
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="personalizar-wrapper" id="personalizarWrapper">
+        <button class="toggle-adjuster-btn" id="toggleAdjusterBtn" type="button" aria-label="Filtrar nivel de cercania" title="Filtrar nivel de cercania"><span class="filter-icon" aria-hidden="true"></span><span>Filtros</span></button>
+
+        <aside class="color-adjuster-panel" id="colorAdjusterPanel" aria-label="Nivel de cercania">
+          <div class="color-adjuster-header">
+            <h2 class="color-adjuster-title">Nivel de cercan&iacute;a</h2>
+            <button class="color-adjuster-close" id="closeAdjusterBtn" type="button" aria-label="Cerrar panel">&times;</button>
+          </div>
+
+          <div class="location-list">
+            <div class="location-item">
+              <button class="location-option" type="button" data-level="cercademi">Cerca de m&iacute;</button>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="ciudad">
+                Ciudad <span class="location-arrow" id="arrow-ciudad" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-ciudad">
+                <button class="submenu-item" type="button" data-value="bogota">Bogot&aacute;</button>
+                <button class="submenu-item" type="button" data-value="medellin">Medell&iacute;n</button>
+                <button class="submenu-item" type="button" data-value="cali">Cali</button>
+                <button class="submenu-item" type="button" data-value="barranquilla">Barranquilla</button>
+                <button class="submenu-item" type="button" data-value="cartagena">Cartagena</button>
+                <button class="submenu-item" type="button" data-value="bucaramanga">Bucaramanga</button>
+                <button class="submenu-item" type="button" data-value="pereira">Pereira</button>
+                <button class="submenu-item" type="button" data-value="manizales">Manizales</button>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="region">
+                Regionales <span class="location-arrow" id="arrow-region" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-region">
+                <button class="submenu-item" type="button" data-value="andina">Regi&oacute;n Andina</button>
+                <button class="submenu-item" type="button" data-value="caribe">Regi&oacute;n Caribe</button>
+                <button class="submenu-item" type="button" data-value="pacifica">Regi&oacute;n Pac&iacute;fica</button>
+                <button class="submenu-item" type="button" data-value="orinoquia">Orinoqu&iacute;a</button>
+                <button class="submenu-item" type="button" data-value="amazonia">Amazonia</button>
+                <button class="submenu-item" type="button" data-value="insular">Regi&oacute;n Insular</button>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="continente">
+                Continente <span class="location-arrow" id="arrow-continente" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-continente">
+                <button class="submenu-item" type="button" data-value="america-sur">Am&eacute;rica del Sur</button>
+                <button class="submenu-item" type="button" data-value="america-norte">Am&eacute;rica del Norte</button>
+                <button class="submenu-item" type="button" data-value="america-central">Am&eacute;rica Central</button>
+                <button class="submenu-item" type="button" data-value="europa">Europa</button>
+                <button class="submenu-item" type="button" data-value="asia">Asia</button>
+                <button class="submenu-item" type="button" data-value="africa">&Aacute;frica</button>
+                <button class="submenu-item" type="button" data-value="oceania">Ocean&iacute;a</button>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <button class="location-option" type="button" data-toggle="pais">
+                Pa&iacute;s <span class="location-arrow" id="arrow-pais" aria-hidden="true">⌄</span>
+              </button>
+              <div class="location-submenu" id="sub-pais">
+                <button class="submenu-item" type="button" data-value="colombia">Colombia</button>
+                <button class="submenu-item" type="button" data-value="venezuela">Venezuela</button>
+                <button class="submenu-item" type="button" data-value="brasil">Brasil</button>
+                <button class="submenu-item" type="button" data-value="ecuador">Ecuador</button>
+                <button class="submenu-item" type="button" data-value="peru">Per&uacute;</button>
+                <button class="submenu-item" type="button" data-value="argentina">Argentina</button>
+                <button class="submenu-item" type="button" data-value="mexico">M&eacute;xico</button>
+                <button class="submenu-item" type="button" data-value="chile">Chile</button>
+                <button class="submenu-item" type="button" data-value="usa">Estados Unidos</button>
+                <button class="submenu-item" type="button" data-value="espana">Espa&ntilde;a</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </nav>
+    <section class="noticia-section" id="noticiaSection">
+      <div class="noticia-header">
+        <span class="etiqueta" id="noticiaEtiqueta"></span>
+        <h2 id="noticiaTitulo"></h2>
+        <p class="bajada" id="noticiaBajada"></p>
+        <div class="news-meta" aria-label="Datos editoriales">
+          <span>Redacci&oacute;n Entre L&iacute;neas</span>
+          <span>An&aacute;lisis</span>
+          <span>Lectura breve</span>
+        </div>
+      </div>
+
+      <div class="context-strip" aria-label="Resumen del tema">
+        <article>
+          <span>Alcance</span>
+          <strong id="claveAlcance"></strong>
+        </article>
+        <article>
+          <span>Punto central</span>
+          <strong id="claveFoco"></strong>
+        </article>
+        <article>
+          <span>Contraste</span>
+          <strong id="claveContraste"></strong>
+        </article>
+      </div>
+
+      <div class="miradas-grid">
+        <article class="mirada-card izquierda">
+          <span class="mirada-label" id="label1"></span>
+          <h3 id="titulo1"></h3>
+          <p id="texto1"></p>
+        </article>
+        <article class="mirada-card central">
+          <span class="mirada-label" id="label2"></span>
+          <h3 id="titulo2"></h3>
+          <p id="texto2"></p>
+        </article>
+        <article class="mirada-card derecha">
+          <span class="mirada-label" id="label3"></span>
+          <h3 id="titulo3"></h3>
+          <p id="texto3"></p>
+        </article>
+      </div>
+
+      <div class="section-subhead" id="videosHeading">
+        <span>Videos</span>
+        <strong>Material relacionado</strong>
+      </div>
+      <div class="videos-grid" id="videosGrid" aria-label="Videos relacionados"></div>
+
+      <form class="comentarios-box" id="comentarioForm">
+        <div class="comentarios-head">
+          <label class="comentarios-label" for="comentarioTexto">Comentarios</label>
+        </div>
+        <div class="comentario-input-row">
+          <input id="comentarioNombre" class="comentario-nombre" type="text" placeholder="Tu nombre" autocomplete="name">
+          <textarea id="comentarioTexto" rows="4" placeholder="Escribe tu comentario"></textarea>
+          <button class="comentario-submit" type="submit">Publicar</button>
+        </div>
+        <div class="comentarios-list" id="comentariosList" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
